@@ -5,10 +5,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
+    <nav className="bg-white shadow-md fixed w-full z-50 h-24 justify-center items-center flex">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Brand Logo */}
-        <a href="#home" className="text-2xl font-bold text-amber-950-600 hover:text-red-800 transition duration-300">
+        <a
+          href="#home"
+          className="text-2xl font-bold text-amber-950-600 hover:text-red-800 transition duration-300"
+        >
           Sawariya Kitchen Rack
         </a>
 
@@ -35,7 +38,7 @@ const Navbar = () => {
             >
               <a
                 href={`#${item.toLowerCase().replace(" ", "")}`}
-                className="text-lg text-gray-700 hover:text-red-600 transition duration-300"
+                className="text-lg text-gray-700 hover:border-b-2 hover:border-black transition duration-300"
               >
                 {item}
               </a>
@@ -48,4 +51,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

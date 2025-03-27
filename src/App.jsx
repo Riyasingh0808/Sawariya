@@ -1,17 +1,16 @@
-import React from 'react'
-import Navbar from './Components/Navbar'
-import Header from './Components/Header'
-import AboutUs from './Components/Aboutus';
+import React from "react";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import AboutUs from "./Components/Aboutus";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Header />
-      <AboutUs/>
+      <Home />
+      <AboutUs />
     </div>
   );
 }
 
-
-export default App
+export default App;
