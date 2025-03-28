@@ -5,11 +5,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50 h-24 justify-center items-center flex">
+    <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 h-20 flex items-center">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Brand Logo */}
         <a
-          href="#home"
+          href="/"
           className="text-2xl font-bold text-amber-950-600 hover:text-red-800 transition duration-300"
         >
           Sawariya Kitchen Rack
