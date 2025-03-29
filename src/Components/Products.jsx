@@ -1,8 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import fruitBasket from "../assets/fruit-basket.png";
-import MiniFruitBasketImg from "../assets/miniFruitBasket.png";
-import SquareBasketImg from "../assets/square-basket.png";
 import { Link } from "react-router-dom";
 import products from "../Products";
 
@@ -20,9 +17,12 @@ function Products() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 max-w-6xl">
         {products.map((product, index) => (
-          <Link to={`/product/${index}`} state={{ product: product }}>
+          <Link 
+            to={`/product/${product.id}`} 
+            state={{ product: product }} 
+            key={product.id}
+          >
             <motion.div
-              key={product.id}
               className="bg-white rounded-2xl shadow-lg overflow-hidden max-w-sm text-center"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}

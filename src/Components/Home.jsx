@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import image1 from "../assets/home-12.jpg";
 
+
+
 const Home = () => {
   const settings = {
     infinite: true,
@@ -14,7 +16,7 @@ const Home = () => {
     slidesToShow: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    pauseOnHover: true, // Fixed typo from "paueOnHover"
+    pauseOnHover: true, 
   };
 
   return (
