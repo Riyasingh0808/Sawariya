@@ -6,8 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import image1 from "../assets/home-12.jpg";
-
-
+import AboutUs from "./AboutUs";
 
 const Home = () => {
   const settings = {
@@ -16,7 +15,7 @@ const Home = () => {
     slidesToShow: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    pauseOnHover: true, 
+    pauseOnHover: true,
   };
 
   return (
@@ -70,6 +69,7 @@ const Home = () => {
       </div>
 
       <Products />
+      <AboutUs />
     </>
   );
 };

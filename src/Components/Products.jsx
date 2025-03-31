@@ -5,7 +5,7 @@ import products from "../Products";
 
 function Products() {
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col items-center py-10">
+    <div className="bg-gray-100 flex flex-col items-center py-10 ">
       <motion.h2
         className="text-4xl font-bold text-gray-800 text-center mb-8 inter-font"
         initial={{ opacity: 0, y: -20 }}
@@ -16,10 +16,10 @@ function Products() {
       </motion.h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 max-w-6xl">
-        {products.map((product, index) => (
-          <Link 
-            to={`/product/${product.id}`} 
-            state={{ product: product }} 
+        {products.slice(0, 3).map((product, index) => (
+          <Link
+            to={`/product/${product.id}`}
+            state={{ product: product }}
             key={product.id}
           >
             <motion.div
