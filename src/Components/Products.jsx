@@ -5,9 +5,9 @@ import products from "../Products";
 
 function Products() {
   return (
-    <div className="bg-gray-100 flex flex-col items-center py-10 ">
+    <div className="bg-[#0A192F] flex flex-col items-center py-10 text-[#F5F5F5]">
       <motion.h2
-        className="text-4xl font-bold text-gray-800 text-center mb-8 inter-font"
+        className="text-4xl font-bold text-center mb-8 inter-font"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -23,7 +23,7 @@ function Products() {
             key={product.id}
           >
             <motion.div
-              className="bg-white rounded-2xl shadow-lg overflow-hidden max-w-sm text-center"
+              className="bg-[#1E2A47] rounded-2xl shadow-lg overflow-hidden max-w-sm text-center border border-[#D4AF37]"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -32,12 +32,12 @@ function Products() {
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-full h-48 object-contain p-4"
+                className="w-full h-48 object-contain p-4 rounded-t-2xl"
               />
 
               <div className="p-4">
                 <motion.button
-                  className="bg-red-600 text-white px-6 py-2 rounded-md text-lg font-bold hover:bg-red-700"
+                  className="bg-[#D4AF37] text-[#0A192F] px-6 py-2 rounded-md text-lg font-bold shadow-md hover:bg-[#E63946] transition duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >

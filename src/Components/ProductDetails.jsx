@@ -65,7 +65,7 @@ function ProductDetails() {
                   <img
                     src={img}
                     alt={`${product.title} ${index + 1}`}
-                    className="w-full rounded-2xl object-cover"
+                    className="w-full h-[80vh] object-contain rounded-2xl"
                   />
                 </SwiperSlide>
               ))}
