@@ -1,14 +1,27 @@
-import deluxeSheetStand1 from "./assets/SteelStand1.jpg";
-import deluxeSheetStand2 from "./assets/SteelStand2.jpg";
-// import squarePipeStand from "./assets/SquarePipeStand.png";
-import squarePipeStand from "./assets/SquarePipeStand.webp";
-import squareShelfPipeStand from "./assets/SquareShelfPipeStand.png";
-import squareFruitTrolly1 from "./assets/SquareFruitTrolly1.png";
-import squareFruitTrolly2 from "./assets/SquareFruitTrolly1.png";
-import squareFruitTrolly3 from "./assets/SquareFruitTrolly3.png";
-import roundClothStand from "./assets/RoundClothStand.png";
-import multiPurposeStand1 from "./assets/MultiPurposeStand1.png";
-import multiPurposeStand2 from "./assets/MultiPurposeStand2.png";
+import DeluxeSteelStand1 from "./assets/DulexSteelStand1.jpg";
+import DeluxeSteelStand2 from "./assets/DulexSteelStand1sizeview.jpg";
+import DeluxeSteelStand3 from "./assets/DulexSteelStandbackview2.jpg";
+import DeluxeSteelStand4 from "./assets/DulexSteelStandzoomview2.jpg";
+
+//square pipe stand
+import SquarePipeStand1 from "./assets/SquarePipeStand.png";
+import SquarePipeStand2 from "./assets/SquarePipeStand.webp";
+
+// square fruit trolley
+import SquareFruitTrolley1 from "./assets/squareFruitTrolly1.jpg";
+import SquareFruitTrolley2 from "./assets/squareFruitTrolly2.jpg";
+import SquareFruitTrolley3 from "./assets/squareFruitTrolly3.jpg";
+
+// round cloth stand
+import RoundClothStand1 from "./assets/RoundClothStand1.jpg";
+import RoundClothStand2 from "./assets/Roundclothstand1zoom.jpg";
+import RoundClothStand3 from "./assets/RoundClothStandcloseview.jpg";
+import RoundClothStand4 from "./assets/RoundclothstandRIGHTVIEW.jpg";
+
+//multipurpose stand
+import multiPurposeStand1 from "./assets/MultiPurposeStand1.jpg";
+import multiPurposeStand2 from "./assets/Multipurposestand1demo.jpg";
+import multiPurposeStand3 from "./assets/Multipurposestand1demo2.jpg";
 
 const products = [
   {
@@ -16,7 +29,12 @@ const products = [
     title: "Delux Sheet Stand",
     category: "Sheet Stand",
     sizes: ["24x24", "30x24", "30x30", "30x36", "39x30", "39x36", "48x36"],
-    image: [deluxeSheetStand1, deluxeSheetStand2],
+    image: [
+      DeluxeSteelStand1,
+      DeluxeSteelStand2,
+      DeluxeSteelStand3,
+      DeluxeSteelStand4,
+    ],
     description: "A premium quality sheet stand available in multiple sizes.",
   },
   {
@@ -40,7 +58,7 @@ const products = [
       "72x30",
       "72x36",
     ],
-    image: [squarePipeStand],
+    image: [SquarePipeStand1, SquarePipeStand2],
     description:
       "This is a multi-tier stainless steel kitchen rack, designed for efficient storage and organization of kitchen essentials. It features multiple shelves and compartments to hold plates, bowls, utensils, and other kitchen accessories. The sturdy metal frame ensures durability, while the open wire design allows for proper ventilation and easy access. Ideal for modern kitchens, this rack helps maximize space and keep everything neatly arranged.",
   },
@@ -62,7 +80,7 @@ const products = [
       "60x36",
       "72x36",
     ],
-    image: [squareShelfPipeStand],
+    image: [],
     description: "Multi-purpose shelf stand with a sturdy square pipe design.",
   },
   {
@@ -70,7 +88,7 @@ const products = [
     title: "Steps Stand",
     category: "Steps Stand",
     sizes: ["2 Steps", "3 Steps", "4 Steps"],
-    image: "/images/steps-stand.jpg",
+    image: "",
     description: "Available in 2, 3, and 4 step configurations.",
   },
   {
@@ -78,7 +96,7 @@ const products = [
     title: "Square Fruit Trolley",
     category: "Fruit Basket",
     sizes: ["Small", "Big"],
-    image: [squareFruitTrolly1, squareFruitTrolly2, squareFruitTrolly3],
+    image: [SquareFruitTrolley1, SquareFruitTrolley2, SquareFruitTrolley3],
     description: "Multipurpose trolley for storing fruits and vegetables.",
   },
   {
@@ -86,7 +104,12 @@ const products = [
     title: "Round Cloth Stand",
     category: "Cloth Stand",
     sizes: ["Small", "Big"],
-    image: [roundClothStand],
+    image: [
+      RoundClothStand1,
+      RoundClothStand2,
+      RoundClothStand3,
+      RoundClothStand4,
+    ],
     description: "Round cloth stand perfect for drying clothes.",
   },
   // New Products
@@ -104,7 +127,7 @@ const products = [
     title: "Multipurpose Basket Stand",
     category: "Basket Stand",
     sizes: ["Single", "Double", "Triple"],
-    image: [multiPurposeStand1, multiPurposeStand2],
+    image: [multiPurposeStand1, multiPurposeStand2, multiPurposeStand3],
     description:
       "Versatile stand with multiple baskets for kitchen essentials.",
   },

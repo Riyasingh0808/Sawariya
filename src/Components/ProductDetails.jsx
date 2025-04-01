@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import {
   Star,
   ShoppingCart,
@@ -38,7 +43,7 @@ function ProductDetails() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex flex-col lg:flex-row gap-12">
-        {/* Left Side - Product Images */}
+        {/* Left Side - Product Image Slider */}
         <motion.div
           className="lg:w-2/3"
           initial={{ opacity: 0, x: -20 }}
@@ -46,11 +51,26 @@ function ProductDetails() {
           transition={{ duration: 0.6 }}
         >
           <div className="relative group">
-            <img
-              src={product.image}
-              alt={product.title}
-              className="w-full rounded-2xl shadow-lg object-cover"
-            />
+            {/* Swiper Slider */}
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={20}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              className="rounded-2xl shadow-lg"
+            >
+              {product.image.map((img, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={img}
+                    alt={`${product.title} ${index + 1}`}
+                    className="w-full rounded-2xl object-cover"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
             <button className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:scale-110 transition-transform">
               <Heart className="w-5 h-5 text-gray-600" />
             </button>
@@ -152,19 +172,6 @@ function ProductDetails() {
                 <Share2 className="w-5 h-5 text-gray-600" />
               </motion.button>
             </div>
-
-            {/* Additional Info */}
-            {/* <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-              <div className="flex items-start gap-3">
-                <Truck className="w-5 h-5 text-gray-600 mt-1" />
-                <div>
-                  <p className="font-medium text-gray-900">Free Delivery</p>
-                  <p className="text-sm text-gray-600">
-                    Enter your postal code for delivery availability
-                  </p>
-                </div>
-              </div>
-            </div> */}
           </div>
         </motion.div>
       </div>

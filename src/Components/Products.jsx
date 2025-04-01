@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -17,7 +16,7 @@ function Products() {
       </motion.h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 max-w-6xl">
-        {products.slice(0, 3).map((product, index) => (
+        {products.map((product, index) => (
           <Link
             to={`/product/${product.id}`}
             state={{ product: product }}
