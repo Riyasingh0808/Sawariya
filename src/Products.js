@@ -1,5 +1,5 @@
-import deluxeSheetStand1 from "./assets/SteelStand1.png";
-import deluxeSheetStand2 from "./assets/SteelStand2.png";
+import deluxeSheetStand1 from "./assets/SteelStand1.jpg";
+import deluxeSheetStand2 from "./assets/SteelStand2.jpg";
 // import squarePipeStand from "./assets/SquarePipeStand.png";
 import squarePipeStand from "./assets/SquarePipeStand.webp";
 import squareShelfPipeStand from "./assets/SquareShelfPipeStand.png";

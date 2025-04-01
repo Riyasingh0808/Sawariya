@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -50,4 +51,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 
