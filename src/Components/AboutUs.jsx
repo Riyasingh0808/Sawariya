@@ -69,10 +69,19 @@ const AboutUs = () => {
           transition={{ duration: 1.2 }}
           className="text-[#F5F5F5] mt-6 text-lg leading-relaxed"
         >
-          Sawariya Kitchen Rack, a brand by Giriraj Steel Company, is known for
-          providing high-quality kitchen storage solutions. We specialize in
-          stainless steel racks, multi-purpose stands, and fruit baskets,
-          catering to various storage needs.
+           Sawariya Kitchen Rack Premium Storage Solutions  A brand by 
+          Giriraj Steel Company, Sawariya Kitchen Rack is renowned for
+          delivering high-quality kitchen storage solutions that blend
+          functionality with elegance. 🔹 Our Specialties: ✔ Stainless Steel
+          Racks – Strong, sleek, and rust-free ✔ Multi-Purpose Stands – Smart
+          storage for every need ✔ Fruit Baskets – Stylish & organized fruit
+          storage Crafted with premium stainless steel, our products guarantee
+          durability, rust resistance, and a modern aesthetic. Whether you want
+          to declutter your kitchen or enhance organization, our innovative
+          designs offer the perfect balance of style and efficiency. 
+           Why
+          Choose Us?  ✅ Premium-Quality Stainless Steel ✅ Space-Saving &
+          Elegant Designs ✅ Durable, Rust-Free & Long-Lasting
         </motion.p>
 
         <motion.div

@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Element } from "react-scroll"; // ✅ Import react-scroll
 import headerImage from "/src/assets/Header.img.jpg";
 import Products from "./Products";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import image1 from "../assets/home-12.jpg";
-import AboutUs from "./AboutUs";
+import AboutUs from "./AboutUs.jsx";
 
 const Home = () => {
   const settings = {
@@ -72,10 +73,17 @@ const Home = () => {
         </div>
       </div>
 
-      <Products />
-      <AboutUs />
+      {/* ✅ Wrapped sections with <Element> to enable smooth scrolling */}
+      <Element name="products">
+        <Products />
+      </Element>
+
+      <Element name="about">
+        <AboutUs />
+      </Element>
     </>
   );
 };
 
 export default Home;
+

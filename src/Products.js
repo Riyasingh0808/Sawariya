@@ -11,6 +11,7 @@ import SquarePipeStand2 from "./assets/SquarePipeStand.webp";
 import SquareFruitTrolley1 from "./assets/squareFruitTrolly1.jpg";
 import SquareFruitTrolley2 from "./assets/squareFruitTrolly2.jpg";
 import SquareFruitTrolley3 from "./assets/squareFruitTrolly3.jpg";
+import Zoomfruittrolley from "./assets/Zoomfruittrolley.jpg"
 
 // round cloth stand
 import RoundClothStand1 from "./assets/RoundClothStand1.jpg";
@@ -22,6 +23,29 @@ import RoundClothStand4 from "./assets/RoundclothstandRIGHTVIEW.jpg";
 import multiPurposeStand1 from "./assets/MultiPurposeStand1.jpg";
 import multiPurposeStand2 from "./assets/Multipurposestand1demo.jpg";
 import multiPurposeStand3 from "./assets/Multipurposestand1demo2.jpg";
+
+//steel stand//
+import SteelStand1 from "./assets/SteelStand1.jpg";
+import SteelStandcloseview from "./assets/SteelStandcloseview.jpg";
+
+// Squaure Basket //
+import Sqaurebasket from "./assets/Squarebasket.jpg";
+import Sqaurebasket1upperview from "./assets/sqaurebasket1upperview.jpg";
+import Sqaurebasket1sideview from "./assets/Sqaurebasket1sideview.jpg";
+import Sqaurebasket1handle from "./assets/Sqaurebasket1handle.jpg";
+import Sqaurebasketzoombottom from "./assets/sqaurebasket1zoombotton.jpg"
+
+// Steel Fruit Basket//
+import roundfruitbasket1 from "./assets/roundfruitbasket1.jpg";
+import miniFruitBasket from "./assets/miniFruitBasket.jpg";
+import Sqaurefruitbasket2 from "./assets/sqaurefruitbasket2.png";
+import fruitbasketnew from "./assets/fruitbasketnew.png";
+import basketround from "./assets/basketround.jpg";
+
+
+
+
+
 
 const products = [
   {
@@ -35,7 +59,8 @@ const products = [
       DeluxeSteelStand3,
       DeluxeSteelStand4,
     ],
-    description: "A premium quality sheet stand available in multiple sizes.",
+    description:
+      "The Deluxe Sheet Stand offers a durable, rust-resistant, and stylish storage solution. Crafted from premium stainless steel, it’s perfect for organizing sheets and kitchen essentials with strength and elegance.",
   },
   {
     id: 2,
@@ -83,27 +108,32 @@ const products = [
     image: [],
     description: "Multi-purpose shelf stand with a sturdy square pipe design.",
   },
-  {
-    id: 4,
-    title: "Steps Stand",
-    category: "Steps Stand",
-    sizes: ["2 Steps", "3 Steps", "4 Steps"],
-    image: "",
-    description: "Available in 2, 3, and 4 step configurations.",
-  },
+
+    {
+      id: 4,
+      title: "Steel Stand",
+      category: "Steel Stand",
+      sizes: [
+        "24x24", "30x24", "30x30", "30x36", 
+        "39x30", "39x36", "48x36", "60x36", "72x36"
+      ],
+      image: [SteelStand1, SteelStandcloseview],  
+      description: 
+        "Upgrade your kitchen storage with our 4-shelf Stainless Steel Stand, designed for durability and elegance. With a 50kg load capacity per layer, this stand efficiently organizes your essentials while maintaining a sleek, powder-coated silver finish. Standing at 4 feet tall, it's perfect for home kitchens, offering a rust-resistant, space-saving solution. Made in India, built to last." // ✅ Corrected
+    },
   {
     id: 5,
     title: "Square Fruit Trolley",
     category: "Fruit Basket",
     sizes: ["Small", "Big"],
-    image: [SquareFruitTrolley1, SquareFruitTrolley2, SquareFruitTrolley3],
-    description: "Multipurpose trolley for storing fruits and vegetables.",
+    image: [SquareFruitTrolley1, SquareFruitTrolley2, SquareFruitTrolley3,Zoomfruittrolley],
+    description: ["Keep your kitchen organized with our 2-step, 3-step, and 4-step stainless steel trolleys. Designed for durability, they feature a polished, rust-resistant finish and a sturdy fixed-height frame. Ideal for storing fruits, vegetables, and kitchen essentials with easy access" ]
   },
   {
     id: 6,
     title: "Round Cloth Stand",
     category: "Cloth Stand",
-    sizes: ["Small", "Big"],
+    types: ["Small", "Big"],
     image: [
       RoundClothStand1,
       RoundClothStand2,
@@ -113,18 +143,25 @@ const products = [
     description: "Round cloth stand perfect for drying clothes.",
   },
   // New Products
+
   {
     id: 7,
-    title: "Kitchen Utility Rack",
-    category: "Rack",
-    sizes: ["2 Shelves", "3 Shelves", "4 Shelves"],
-    image: "/images/kitchen-utility-rack.jpg",
-    description:
-      "Compact and sturdy kitchen utility rack for organized storage.",
+    title: "Stainless Steel Fruit Basket",
+    category: "Baskets",
+    sizes: ["Round basket", "Curve basket"],
+    image: [
+      miniFruitBasket,
+      roundfruitbasket1,
+      Sqaurefruitbasket2,
+      fruitbasketnew,
+      basketround
+    ], 
+    description: 
+      "Organize your fruits in style with our small round and square stainless steel baskets. Designed for durability and elegance, these baskets feature a rust-resistant, polished finish with an open structure for better air circulation, keeping fruits fresh for longer. Perfect for home and commercial use."  // ✅ Fixed description format
   },
-  {
+    {
     id: 8,
-    title: "Multipurpose Basket Stand",
+    title: "Multipurpose Stand",
     category: "Basket Stand",
     sizes: ["Single", "Double", "Triple"],
     image: [multiPurposeStand1, multiPurposeStand2, multiPurposeStand3],
@@ -133,12 +170,12 @@ const products = [
   },
   {
     id: 9,
-    title: "Adjustable Dish Rack",
-    category: "Dish Rack",
-    sizes: ["Small", "Medium", "Large"],
-    image: "/images/adjustable-dish-rack.jpg",
-    description:
-      "Adjustable dish rack to keep your plates and cutlery organized.",
+    title: "SquareBasket",
+    category: "Basket",
+    sizes: ["Medium", "Large"],
+    image: [Sqaurebasket,Sqaurebasket1sideview,Sqaurebasket1upperview,Sqaurebasket1handle,Sqaurebasketzoombottom],
+    description:["A durable and rust-resistant square steel basket, perfect for storing washed utensils. Designed with high-quality stainless steel, it ensures proper drainage and ventilation, keeping your kitchen organized and hygienic. Ideal for homes and commercial kitchens."],
+      
   },
 ];
 

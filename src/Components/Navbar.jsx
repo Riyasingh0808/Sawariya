@@ -29,7 +29,7 @@ const Navbar = () => {
             isOpen ? "top-16 opacity-100" : "-top-64 opacity-0 md:opacity-100"
           } md:flex-row flex flex-col items-center shadow-md md:shadow-none rounded-lg`}
         >
-          {["About Us", "Products", "Sizes", "Contact"].map((item, index) => (
+          {["About Us", "Products", "ContactUs"].map((item, index) => (
             <motion.li
               key={index}
               whileHover={{ scale: 1.1 }}
