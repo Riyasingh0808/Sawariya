@@ -1,127 +1,129 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <nav className="shadow-md fixed top-0 left-0 w-full z-50 h-20 flex items-center bg-[#0A192F]">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Brand Logo */}
-        <a
-          href="/"
-          className="text-2xl font-bold text-[#D4AF37] hover:text-[#E63946] transition duration-300"
-        >
-          Sawariya Kitchen Rack
-        </a>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-[#D4AF37] focus:outline-none text-2xl"
-        >
-          {isOpen ? "✖" : "☰"}
-        </button>
-
-        {/* Nav Links */}
-        <ul
-          className={`md:flex space-x-6 absolute md:static bg-[#1E2A47] md:bg-transparent w-full md:w-auto left-0 p-4 md:p-0 transition-all duration-300 ${
-            isOpen ? "top-16 opacity-100" : "-top-64 opacity-0 md:opacity-100"
-          } md:flex-row flex flex-col items-center shadow-md md:shadow-none rounded-lg`}
-        >
-          {["About Us", "Products", "Sizes", "Contact"].map((item, index) => (
-            <motion.li
-              key={index}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="py-2 md:py-0"
-            >
-              <a
-                href={`#${item.toLowerCase().replace(" ", "")}`}
-                className="text-lg text-[#F5F5F5] hover:text-[#E63946] border-b-2 border-transparent hover:border-[#D4AF37] transition duration-300"
-              >
-                {item}
-              </a>
-            </motion.li>
-          ))}
-        </ul>
-      </div>
-    </nav>
-  );
-};
+import {
+  CheckCircle,
+  Package,
+  Apple,
+  MapPin,
+  Building,
+  Mail,
+  Phone,
+} from "lucide-react";
 
 const AboutUs = () => {
   return (
-    <section id="about" className="bg-[#1E2A47] py-16 px-6 md:px-20 lg:px-32">
+    <section
+      id="about"
+      className="bg-[#EEF1F7] py-16 px-6 md:px-20 lg:px-32 text-[#333]"
+    >
       <div className="container mx-auto text-center">
+        {/* Heading */}
         <motion.h2
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-5xl font-bold text-[#E63946]"
+          className="text-4xl md:text-5xl font-bold text-[#2C3E50] border-b-4 border-[#D4AF37] inline-block pb-2"
         >
           About Sawariya Kitchen Rack
         </motion.h2>
 
+        {/* Description */}
         <motion.p
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
-          className="text-[#F5F5F5] mt-6 text-lg leading-relaxed"
+          className="text-gray-700 mt-6 text-lg leading-relaxed max-w-4xl mx-auto"
         >
-           Sawariya Kitchen Rack Premium Storage Solutions  A brand by 
-          Giriraj Steel Company, Sawariya Kitchen Rack is renowned for
-          delivering high-quality kitchen storage solutions that blend
-          functionality with elegance. 🔹 Our Specialties: ✔ Stainless Steel
-          Racks – Strong, sleek, and rust-free ✔ Multi-Purpose Stands – Smart
-          storage for every need ✔ Fruit Baskets – Stylish & organized fruit
-          storage Crafted with premium stainless steel, our products guarantee
-          durability, rust resistance, and a modern aesthetic. Whether you want
-          to declutter your kitchen or enhance organization, our innovative
-          designs offer the perfect balance of style and efficiency. 
-           Why
-          Choose Us?  ✅ Premium-Quality Stainless Steel ✅ Space-Saving &
-          Elegant Designs ✅ Durable, Rust-Free & Long-Lasting
+          Sawariya Kitchen Rack, a brand by{" "}
+          <span className="text-[#D4AF37] font-semibold">
+            Giriraj Steel Company
+          </span>
+          , is renowned for delivering premium kitchen storage solutions that
+          blend **functionality** with **elegance**.
         </motion.p>
 
+        {/* Specialties Section */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-          className="text-[#F5F5F5] mt-6 leading-relaxed w-full"
+          transition={{ duration: 1.3 }}
+          className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          <span className="text-md md:text-3xl font-bold text-[#E63946] mb-10 border-b-2 border-[#D4AF37]">
-            Our office
-          </span>
+          {/* Feature Cards */}
+          {[
+            {
+              icon: <Package size={30} className="text-[#D4AF37]" />,
+              title: "Stainless Steel Racks",
+              description:
+                "Strong, sleek, and rust-free solutions for your kitchen.",
+            },
+            {
+              icon: <CheckCircle size={30} className="text-[#D4AF37]" />,
+              title: "Multi-Purpose Stands",
+              description: "Smart storage for every household need.",
+            },
+            {
+              icon: <Apple size={30} className="text-[#D4AF37]" />,
+              title: "Stylish Fruit Baskets",
+              description: "Organized fruit storage with a touch of elegance.",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="bg-white p-6 rounded-xl shadow-lg border border-[#D4AF37] transition duration-300 hover:scale-105 hover:shadow-[#D4AF37]"
+            >
+              <div className="flex items-center justify-center">
+                {item.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-[#2C3E50] mt-4">
+                {item.title}
+              </h3>
+              <p className="text-gray-700 mt-3">{item.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Why Choose Us */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+          className="mt-10 bg-white p-6 rounded-lg shadow-lg border border-[#D4AF37]"
+        >
+          <h3 className="text-2xl font-bold text-[#2C3E50]">Why Choose Us?</h3>
+          <ul className="text-gray-700 mt-4 space-y-2">
+            {[
+              "Premium-Quality Stainless Steel",
+              "Space-Saving & Elegant Designs",
+              "Durable, Rust-Free & Long-Lasting",
+            ].map((point, index) => (
+              <li
+                key={index}
+                className="text-lg flex items-center justify-center gap-2"
+              >
+                <CheckCircle size={20} className="text-[#D4AF37]" /> {point}
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+        {/* Location Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.7 }}
+          className="mt-16 w-full text-center"
+        >
+          <h3 className="text-3xl font-bold text-[#2C3E50] mb-4 border-b-2 border-[#D4AF37] pb-2 flex items-center justify-center gap-2">
+            <MapPin size={28} className="text-[#D4AF37]" /> Our Office
+          </h3>
           <iframe
-            className="w-full h-[400px] mt-7 rounded-lg"
+            className="w-full h-[400px] mt-5 rounded-lg shadow-lg border-2 border-[#D4AF37]"
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3720.9025013944497!2d79.10506711139043!3d21.156278034891105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJagnath%20Budhwari%20Road%2C%20Teen%20Nal%20Chowk%2C%20Itwari%2C%20Nagpur-02!5e0!3m2!1sen!2sin!4v1743094517568!5m2!1sen!2sin"
-            width="600"
-            height="450"
-            style={{ border: "0" }}
-            allowFullScreen=""
+            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          className="mt-10 bg-[#0A192F] shadow-md p-6 rounded-lg"
-        >
-          <h3 className="text-xl font-semibold text-[#D4AF37]">Our Location</h3>
-          <p className="text-[#F5F5F5] mt-2">
-            📍 Factory: 15, Ward No.3, Mahalgaon, Tah. Kamptee, Dist. Nagpur
-          </p>
-          <p className="text-[#F5F5F5]">
-            🏢 Office: Jagnath Budhwari Road, Teen Nal Chowk, Itwari, Nagpur-02
-          </p>
-          <p className="text-[#F5F5F5] mt-2">
-            📧 Email: girirajsteelcompany@gmail.com
-          </p>
-          <p className="text-[#F5F5F5]">📞 Contact: 0712-2777417, 2763762</p>
         </motion.div>
       </div>
     </section>
