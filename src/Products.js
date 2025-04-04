@@ -8,6 +8,7 @@ import SquarePipeStand1 from "./assets/SquarePipeStand.png";
 import SquarePipeStand2 from "./assets/SquarePipeStand.webp";
 
 // square fruit trolley
+import SquareFruitTrolly5 from "./assets/SquareFruitTrolly5.jpg";
 import SquareFruitTrolley1 from "./assets/squareFruitTrolly1.jpg";
 import SquareFruitTrolley2 from "./assets/squareFruitTrolly2.jpg";
 import SquareFruitTrolley3 from "./assets/squareFruitTrolly3.jpg";
@@ -29,6 +30,7 @@ import SteelStand1 from "./assets/SteelStand1.jpg";
 import SteelStandcloseview from "./assets/SteelStandcloseview.jpg";
 
 // Squaure Basket //
+import squarebacketHomepage from "./assets/SquarebacketHomepage.jpg";
 import Sqaurebasket from "./assets/Squarebasket.jpg";
 import Sqaurebasket1upperview from "./assets/sqaurebasket1upperview.jpg";
 import Sqaurebasket1sideview from "./assets/Sqaurebasket1sideview.jpg";
@@ -37,6 +39,7 @@ import Sqaurebasketzoombottom from "./assets/sqaurebasket1zoombotton.jpg";
 
 // Steel Fruit Basket//
 import roundfruitbasket1 from "./assets/roundfruitbasket1.jpg";
+import roundfruitbasket1homepage from "./assets/roundfruitbasket1homepage.jpg";
 import miniFruitBasket from "./assets/miniFruitBasket.jpg";
 import Sqaurefruitbasket2 from "./assets/sqaurefruitbasket2.png";
 import fruitbasketnew from "./assets/fruitbasketnew.png";
@@ -83,7 +86,7 @@ const products = [
       "72x30",
       "72x36",
     ],
-    image: [SquarePipeStand1, SquarePipeStand2],
+    image: [SquarePipeStand2, SquarePipeStand1],
     description:
       "This is a multi-tier stainless steel kitchen rack, designed for efficient storage and organization of kitchen essentials. It features multiple shelves and compartments to hold plates, bowls, utensils, and other kitchen accessories. The sturdy metal frame ensures durability, while the open wire design allows for proper ventilation and easy access. Ideal for modern kitchens, this rack helps maximize space and keep everything neatly arranged.",
   },
@@ -122,8 +125,9 @@ const products = [
     category: "Fruit Basket",
     sizes: ["Small", "Big"],
     image: [
-      SquareFruitTrolley1,
+      SquareFruitTrolly5,
       SquareFruitTrolley2,
+      SquareFruitTrolley1,
       SquareFruitTrolley3,
       Zoomfruittrolley,
     ],
@@ -152,6 +156,7 @@ const products = [
     category: "Baskets",
     sizes: ["Round basket", "Curve basket"],
     image: [
+      roundfruitbasket1homepage,
       miniFruitBasket,
       roundfruitbasket1,
       Sqaurefruitbasket2,
@@ -176,6 +181,7 @@ const products = [
     category: "Basket",
     sizes: ["Medium", "Large"],
     image: [
+      squarebacketHomepage,
       Sqaurebasket,
       Sqaurebasket1sideview,
       Sqaurebasket1upperview,
