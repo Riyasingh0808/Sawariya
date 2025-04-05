@@ -58,15 +58,6 @@ const products = [
     id: 1,
     title: "Square Pipe Stand",
     category: "Sheet Stand",
-    sizes: ["24x24", "30x24", "30x30", "30x36", "39x30", "39x36", "48x36"],
-    image: [SquarePipeStand2, SquarePipeStand1],
-    description:
-      "The Deluxe Sheet Stand offers a durable, rust-resistant, and stylish storage solution. Crafted from premium stainless steel, it’s perfect for organizing sheets and kitchen essentials with strength and elegance.",
-  },
-  {
-    id: 2,
-    title: "Sheet Stand",
-    category: "Stand",
     sizes: [
       "15x15",
       "18x18",
@@ -84,9 +75,28 @@ const products = [
       "72x30",
       "72x36",
     ],
+    image: [SquarePipeStand2, SquarePipeStand1],
+    description:
+      "This is a multi-tier stainless steel kitchen rack, designed for efficient storage and organization of kitchen essentials. It features multiple shelves and compartments to hold plates, bowls, utensils, and other kitchen accessories. The sturdy metal frame ensures durability, while the open wire design allows for proper ventilation and easy access. Ideal for modern kitchens, this rack helps maximize space and keep everything neatly arranged",
+  },
+  {
+    id: 2,
+    title: "Sheet Stand",
+    category: "Stand",
+    sizes: [
+      "24 X 24",
+      " 30 X 24",
+      " 30 X 30",
+      " 30 X 36",
+      " 39 X 30",
+      "39 X 36",
+      "48 X 36",
+      "60 X 36",
+      "72 X 36",
+    ],
     image: [SteelStand2, SteelStandcloseview],
     description:
-      "This is a multi-tier stainless steel kitchen rack, designed for efficient storage and organization of kitchen essentials. It features multiple shelves and compartments to hold plates, bowls, utensils, and other kitchen accessories. The sturdy metal frame ensures durability, while the open wire design allows for proper ventilation and easy access. Ideal for modern kitchens, this rack helps maximize space and keep everything neatly arranged.",
+      "A high-capacity, wall-mounted stainless steel rack designed to neatly store plates, bowls, cups, containers, and cookware. Crafted from durable rust-resistant steel, it saves counter space while keeping your kitchen organized and clutter-free. Ideal for modern homes with limited space.",
   },
   {
     id: 3,
@@ -102,20 +112,10 @@ const products = [
     id: 4,
     title: "Delux Steel Stand",
     category: "Steel Stand",
-    sizes: [
-      "24x24",
-      "30x24",
-      "30x30",
-      "30x36",
-      "39x30",
-      "39x36",
-      "48x36",
-      "60x36",
-      "72x36",
-    ],
+    sizes: ["24x24", "30x24", "30x30", "30x36", "39x30", "39x36", "48x36"],
     image: [SteelStand1, DeluxSteelStand1, DeluxSteelStand3],
     description:
-      "The Deluxe Sheet Stand offers a durable, rust-resistant, and stylish storage solution. Crafted from premium stainless steel, it’s perfect for organizing sheets and kitchen essentials with strength and elegance.", // ✅ Corrected
+      "The Deluxe Sheet Stand offers a durable, rust-resistant, and stylish storage solution. Crafted from premium stainless steel, it’s perfect for organizing sheets and kitchen essentials with strength and elegance..", // ✅ Corrected
   },
   {
     id: 5,
