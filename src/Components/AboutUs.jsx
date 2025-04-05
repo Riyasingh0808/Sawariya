@@ -39,7 +39,7 @@ const AboutUs = () => {
             Giriraj Steel Company
           </span>
           , is renowned for delivering premium kitchen storage solutions that
-          blend **functionality** with **elegance**.
+          blend <strong>functionality</strong> with <strong>elegance</strong>.
         </motion.p>
 
         {/* Specialties Section */}
@@ -118,12 +118,56 @@ const AboutUs = () => {
             <MapPin size={28} className="text-[#D4AF37]" /> Our Office
           </h3>
           <iframe
-            className="w-full h-[400px] mt-5 rounded-lg shadow-lg border-2 border-[#D4AF37]"
-            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3720.9025013944497!2d79.10506711139043!3d21.156278034891105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJagnath%20Budhwari%20Road%2C%20Teen%20Nal%20Chowk%2C%20Itwari%2C%20Nagpur-02!5e0!3m2!1sen!2sin!4v1743094517568!5m2!1sen!2sin"
-            allowFullScreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7441.776085779334!2d79.1038508414471!3d21.15685332209858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1e3bcbdeb77%3A0xb5992653e8b1cc33!2sTeen%20nal%20chowk%20%2C%20itwari%20%2C%20old%20bhandara%20road%20.!5e0!3m2!1sen!2sin!4v1743871420941!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
+
+          {/* Contact Info Cards */}
+          {/* Contact Info Cards */}
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Card Template */}
+            {[
+              {
+                icon: <Building size={28} className="text-[#D4AF37]" />,
+                title: "Office Address",
+                value:
+                  "Jagnath Budhwari Road, Teen Nal Chowk, Itwari, Nagpur-02",
+              },
+              {
+                icon: <Building size={28} className="text-[#D4AF37]" />,
+                title: "Factory Address",
+                value: "Plot No. 12, Industrial Area, MIDC Hingna, Nagpur-28",
+              },
+              {
+                icon: <Phone size={28} className="text-[#D4AF37]" />,
+                title: "Phone",
+                value: "+91 98765 43210",
+              },
+              {
+                icon: <Mail size={28} className="text-[#D4AF37]" />,
+                title: "Email",
+                value: "contact@sawariyakitchenrack.com",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-md border border-[#D4AF37] flex items-center gap-4 place-content-evenly"
+              >
+                <div className="flex-shrink-0">{item.icon}</div>
+                <div>
+                  <h4 className="text-lg font-semibold text-[#2C3E50]">
+                    {item.title}
+                  </h4>
+                  <p className="text-gray-700 mt-1 text-center">{item.value}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

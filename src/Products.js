@@ -1,7 +1,6 @@
-import DeluxeSteelStand1 from "./assets/DulexSteelStand1.jpg";
-import DeluxeSteelStand2 from "./assets/DulexSteelStand1sizeview.jpg";
-import DeluxeSteelStand3 from "./assets/DulexSteelStandbackview2.jpg";
-import DeluxeSteelStand4 from "./assets/DulexSteelStandzoomview2.jpg";
+import DeluxSteelStand1 from "./assets/DeluxSteelStand.webp";
+// import DeluxSteelStand2 from "./assets/DeluxSheetStand.jpg";
+import DeluxSteelStand3 from "./assets/DeluxSteelStand2.jpg";
 
 //square pipe stand
 import SquarePipeStand1 from "./assets/SquarePipeStand.png";
@@ -28,6 +27,7 @@ import multiPurposeStand3 from "./assets/Multipurposestand1demo2.jpg";
 //steel stand//
 import SteelStand1 from "./assets/SteelStand1.jpg";
 import SteelStandcloseview from "./assets/SteelStandcloseview.jpg";
+import SteelStand2 from "./assets/SheetStand1.png";
 
 // Squaure Basket //
 import squarebacketHomepage from "./assets/SquarebacketHomepage.jpg";
@@ -50,24 +50,22 @@ import SquareClothStand1Details from "./assets/SqaureClothStand1Details.jpg";
 import SquareClothStand1 from "./assets/SqaureClothStand1.jpg";
 import SquareClothStand from "./assets/SquareClothStand.png";
 
+//Square shelf sttand
+import squareShelfStand from "./assets/SquareShelfPipeStand.png";
+
 const products = [
   {
     id: 1,
-    title: "Delux Sheet Stand",
+    title: "Square Pipe Stand",
     category: "Sheet Stand",
     sizes: ["24x24", "30x24", "30x30", "30x36", "39x30", "39x36", "48x36"],
-    image: [
-      DeluxeSteelStand1,
-      DeluxeSteelStand2,
-      DeluxeSteelStand3,
-      DeluxeSteelStand4,
-    ],
+    image: [SquarePipeStand2, SquarePipeStand1],
     description:
       "The Deluxe Sheet Stand offers a durable, rust-resistant, and stylish storage solution. Crafted from premium stainless steel, it’s perfect for organizing sheets and kitchen essentials with strength and elegance.",
   },
   {
     id: 2,
-    title: "Square Pipe Stand",
+    title: "Sheet Stand",
     category: "Stand",
     sizes: [
       "15x15",
@@ -86,7 +84,7 @@ const products = [
       "72x30",
       "72x36",
     ],
-    image: [SquarePipeStand2, SquarePipeStand1],
+    image: [SteelStand2, SteelStandcloseview],
     description:
       "This is a multi-tier stainless steel kitchen rack, designed for efficient storage and organization of kitchen essentials. It features multiple shelves and compartments to hold plates, bowls, utensils, and other kitchen accessories. The sturdy metal frame ensures durability, while the open wire design allows for proper ventilation and easy access. Ideal for modern kitchens, this rack helps maximize space and keep everything neatly arranged.",
   },
@@ -102,7 +100,7 @@ const products = [
 
   {
     id: 4,
-    title: "Steel Stand",
+    title: "Delux Steel Stand",
     category: "Steel Stand",
     sizes: [
       "24x24",
@@ -115,9 +113,9 @@ const products = [
       "60x36",
       "72x36",
     ],
-    image: [SteelStand1, SteelStandcloseview],
+    image: [SteelStand1, DeluxSteelStand1, DeluxSteelStand3],
     description:
-      "Upgrade your kitchen storage with our 4-shelf Stainless Steel Stand, designed for durability and elegance. With a 50kg load capacity per layer, this stand efficiently organizes your essentials while maintaining a sleek, powder-coated silver finish. Standing at 4 feet tall, it's perfect for home kitchens, offering a rust-resistant, space-saving solution. Made in India, built to last.", // ✅ Corrected
+      "The Deluxe Sheet Stand offers a durable, rust-resistant, and stylish storage solution. Crafted from premium stainless steel, it’s perfect for organizing sheets and kitchen essentials with strength and elegance.", // ✅ Corrected
   },
   {
     id: 5,
@@ -170,13 +168,36 @@ const products = [
     id: 8,
     title: "Multipurpose Stand",
     category: "Basket Stand",
-    sizes: ["Single", "Double", "Triple"],
+    sizes: ["2 Step", "3 Step", "4 Step"],
     image: [multiPurposeStand1, multiPurposeStand2, multiPurposeStand3],
     description:
       "Versatile stand with multiple baskets for kitchen essentials.",
   },
   {
     id: 9,
+    title: "SQUARE PIPE SHELF STAND",
+    category: "Basket",
+    sizes: [
+      "15 X 15",
+      "18 X 18",
+      "18 X 24",
+      "24 X 18",
+      "24 X 24",
+      "30 X 24",
+      "30 X 30",
+      "39 X 30",
+      "39 X 36",
+      "48 X 36",
+      "60 X 36",
+      "72 X 36",
+    ],
+    image: [squareShelfStand],
+    description: [
+      "A durable and rust-resistant square steel basket, perfect for storing washed utensils. Designed with high-quality stainless steel, it ensures proper drainage and ventilation, keeping your kitchen organized and hygienic. Ideal for homes and commercial kitchens.",
+    ],
+  },
+  {
+    id: 10,
     title: "SquareBasket",
     category: "Basket",
     sizes: ["Medium", "Large"],

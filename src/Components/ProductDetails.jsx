@@ -22,6 +22,15 @@ function ProductDetails() {
   const [selectedSize, setSelectedSize] = useState("");
   const [showDescription, setShowDescription] = useState(true);
   const [fullScreenImage, setFullScreenImage] = useState(null);
+  const [showShareModal, setShowShareModal] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const currentURL = window.location.href;
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(currentURL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const product =
     location.state?.product || products.find((p) => p.id === parseInt(id));
@@ -81,7 +90,7 @@ function ProductDetails() {
               ${product.price}
             </span>
             <span className="text-lg text-gray-700 line-through">
-              ${(product.price * 1.2).toFixed(2)}
+              {/* ${(product.price * 1.2).toFixed(2)} */}
             </span>
           </div>
 
@@ -122,6 +131,16 @@ function ProductDetails() {
               </button>
             ))}
           </div>
+
+          {/* Share Button */}
+          <div className="text-center mt-4">
+            <button
+              onClick={() => setShowShareModal(true)}
+              className="flex items-center justify-center gap-2 bg-[#2C3E50] text-white px-4 py-2 rounded-lg hover:bg-[#1A2536] transition"
+            >
+              <Share2 size={18} /> Share Product
+            </button>
+          </div>
         </motion.div>
       </div>
 
@@ -140,6 +159,44 @@ function ProductDetails() {
             className="max-w-4xl max-h-[90vh] object-contain"
           />
         </div>
+      )}
+
+      {/* Share Modal */}
+      {showShareModal && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50"
+        >
+          <motion.div
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            className="bg-white p-6 rounded-xl shadow-lg max-w-md w-full text-center relative border-2 border-[#D4AF37]"
+          >
+            <button
+              onClick={() => setShowShareModal(false)}
+              className="absolute top-4 right-4 text-gray-600 hover:text-red-500"
+            >
+              <X />
+            </button>
+            <h3 className="text-xl font-semibold text-[#2C3E50] mb-4">
+              Share this product
+            </h3>
+            <input
+              type="text"
+              value={currentURL}
+              readOnly
+              className="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none text-sm"
+            />
+            <button
+              onClick={handleCopy}
+              className="mt-4 bg-[#D4AF37] text-[#2C3E50] px-4 py-2 rounded hover:bg-[#C49B2D] transition"
+            >
+              {copied ? "Copied!" : "Copy Link"}
+            </button>
+          </motion.div>
+        </motion.div>
       )}
     </div>
   );

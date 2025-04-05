@@ -9,12 +9,12 @@ const Navbar = () => {
     <nav className="shadow-md fixed top-0 left-0 w-full z-50 h-20 flex items-center bg-[#EEF1F7]">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Brand Logo */}
-        <a
-          href="/"
+        <Link
+          to="/"
           className="text-2xl font-bold text-[#2C3E50] hover:text-[#D4AF37] transition duration-300"
         >
           Sawariya Kitchen Rack
-        </a>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -31,9 +31,10 @@ const Navbar = () => {
           } md:flex-row flex flex-col items-center shadow-md md:shadow-none rounded-lg`}
         >
           {[
-            { name: "About Us", to: "about" },
-            { name: "Products", to: "products" },
-            { name: "Contact Us", to: "contact" },
+            { name: "Home", to: "/" },
+            { name: "About Us", to: "/about" },
+            { name: "Products", to: "/products" },
+            // { name: "Contact Us", to: "/contact" },
           ].map((item, index) => (
             <motion.li
               key={index}
@@ -43,10 +44,7 @@ const Navbar = () => {
             >
               <Link
                 to={item.to}
-                smooth={true}
-                duration={500}
-                spy={true}
-                offset={-70}
+                onClick={() => setIsOpen(false)} // close menu on click (mobile UX)
                 className="text-lg text-[#2C3E50] hover:text-[#D4AF37] border-b-2 border-transparent hover:border-[#D4AF37] transition duration-300 cursor-pointer"
               >
                 {item.name}
