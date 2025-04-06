@@ -8,7 +8,7 @@ import SquarePipeStand2 from "./assets/SquarePipeStand.webp";
 
 // square fruit trolley
 import SquareFruitTrolly5 from "./assets/SquareFruitTrolly5.jpg";
-import SquareFruitTrolley1 from "./assets/squareFruitTrolly1.jpg";
+import SquareFruitTrolley1 from "./assets/SquareFruitTrolly2step.jpg";
 import SquareFruitTrolley2 from "./assets/squareFruitTrolly2.jpg";
 import SquareFruitTrolley3 from "./assets/squareFruitTrolly3.jpg";
 import Zoomfruittrolley from "./assets/Zoomfruittrolley.jpg";
