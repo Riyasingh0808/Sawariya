@@ -14,7 +14,7 @@ import SquareFruitTrolley3 from "./assets/SquareFruitTrolly3.jpg";
 import Zoomfruittrolley from "./assets/Zoomfruittrolley.jpg";
 
 // round cloth stand
-import RoundClothStand1 from "./assets/Roundclothstand1.jpg";
+import RoundClothStand1 from "./assets/RoundClothStand1.jpg";
 import RoundClothStand2 from "./assets/Roundclothstand1zoom.jpg";
 import RoundClothStand3 from "./assets/RoundClothStandcloseview.jpg";
 import RoundClothStand4 from "./assets/RoundclothstandRIGHTVIEW.jpg";
