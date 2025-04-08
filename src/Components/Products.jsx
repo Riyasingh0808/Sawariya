@@ -10,7 +10,8 @@ function Products() {
   return (
     <div className="bg-[#EEF1F7] flex pt-20 flex-col items-center text-[#2C3E50]">
       <motion.h2
-        className="text-4xl font-bold text-center mb-8 inter-font"
+        className="text-4xl font-bold text-center mb-8 inter-font md:text-5xl text-[#2C3E50] border-b-4 border-[#D4AF37] inline-block pb-2"
+        style={{ opacity: 1, transform: "none" }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

@@ -141,7 +141,7 @@ const AboutUs = () => {
               {
                 icon: <Building size={28} className="text-[#D4AF37]" />,
                 title: "Factory Address",
-                value: "Plot No. 12, Industrial Area, MIDC Hingna, Nagpur-28",
+                value: "15, WARD NO.3, MAHALGAON, TAH. KAMPTEE, DIST. NAGPUR",
               },
               {
                 icon: <Phone size={28} className="text-[#D4AF37]" />,

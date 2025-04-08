@@ -1,25 +1,29 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png"; // logo image
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="shadow-md fixed top-0 left-0 w-full z-50 h-20 flex items-center bg-[#EEF1F7]">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Brand Logo */}
-        <Link
-          to="/"
-          className="text-2xl font-bold text-[#2C3E50] hover:text-[#D4AF37] transition duration-300"
-        >
-          Sawariya Kitchen Rack
+    <nav className="shadow-md fixed top-0 left-0 w-full z-50 bg-[#EEF1F7] h-20 flex items-center">
+      <div className="container mx-auto flex justify-between items-center px-4 md:px-10">
+        {/* Logo */}
+        <Link to="/" className="flex items-center space-x-3">
+          <motion.img
+            src={logo}
+            alt="Sawariya Logo"
+            className="h-20 w-48  rounded-lg shadow-sm"
+            whileHover={{ scale: 1.05, rotate: -1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          />
         </Link>
 
-        {/* Mobile Menu Button */}
+        {/* Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-[#2C3E50] focus:outline-none text-2xl"
+          className="md:hidden text-[#2C3E50] text-2xl focus:outline-none"
         >
           {isOpen ? "✖" : "☰"}
         </button>
@@ -30,24 +34,18 @@ const Navbar = () => {
             isOpen ? "top-16 opacity-100" : "-top-64 opacity-0 md:opacity-100"
           } md:flex-row flex flex-col items-center shadow-md md:shadow-none rounded-lg`}
         >
-          {[
-            { name: "Home", to: "/" },
-            { name: "About Us", to: "/about" },
-            { name: "Products", to: "/products" },
-            // { name: "Contact Us", to: "/contact" },
-          ].map((item, index) => (
+          {["Home", "About Us", "Products"].map((item, index) => (
             <motion.li
               key={index}
               whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 200 }}
               className="py-2 md:py-0"
             >
               <Link
-                to={item.to}
-                onClick={() => setIsOpen(false)} // close menu on click (mobile UX)
-                className="text-lg text-[#2C3E50] hover:text-[#D4AF37] border-b-2 border-transparent hover:border-[#D4AF37] transition duration-300 cursor-pointer"
+                to={`/${item.toLowerCase().replace(" ", "")}`}
+                onClick={() => setIsOpen(false)}
+                className="text-lg text-[#2C3E50] hover:text-[#D4AF37] border-b-2 border-transparent hover:border-[#D4AF37] transition duration-300"
               >
-                {item.name}
+                {item}
               </Link>
             </motion.li>
           ))}
